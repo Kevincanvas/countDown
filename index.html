@@ -9,8 +9,20 @@
 	<h1 id="demo"></h1>
 
 	<script>
+
+	const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+	  "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+	];
+
+	const d = new Date();
+	var currentMonthName = monthNames[d.getMonth()];
+
+	var currentDay =  new Date().getDate();
+
+	var currentYear = new Date().getFullYear();
+
 	// Set the date we're counting down to
-	var countDownDate = new Date("Feb 5, 2020 19:00:00").getTime();
+	var countDownDate = new Date(currentMonthName+" "+currentDay+", "+currentYear+" 19:00:00").getTime();
 
 	// Update the count down every 1 second
 	var x = setInterval(function() {
